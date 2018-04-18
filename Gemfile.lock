@@ -3,13 +3,17 @@ GEM
   specs:
     httparty (0.16.2)
       multi_xml (>= 0.5.2)
+    json (2.1.0)
     multi_xml (0.6.0)
+    puma (3.11.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   httparty
+  json
+  puma
 
 BUNDLED WITH
    1.16.1
