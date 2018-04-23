@@ -4,6 +4,7 @@ require 'json'
 class Kele
   include HTTParty
   include JSON
+  include Roadmap
 
   def initialize(email, password)
     post_response = self.class.post(api_endpoint("sessions"), body: { "email": email, "password": password })
