@@ -1,9 +1,4 @@
-require 'httparty'
-require 'json'
-
-module Roadmap
-  include HTTParty
-  include JSON
+class Roadmap
 
   def get_roadmap (chain_id)
     id = chain_id
@@ -16,10 +11,5 @@ module Roadmap
     response = self.class.get(api_endpoint("checkpoints/#{id}"), headers: {"content_type" => 'application/json', "authorization" => @auth_token })
     checkpoint = JSON.parse(response.body)
   end
-
-  private
-    def api_endpoint(endpoint)
-      "https://www.bloc.io/api/v1/#{endpoint}"
-    end
 
 end
