@@ -1,4 +1,4 @@
-class Roadmap
+module Roadmap
 
   def get_roadmap (chain_id)
     id = chain_id
